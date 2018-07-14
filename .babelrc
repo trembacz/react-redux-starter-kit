@@ -1,0 +1,29 @@
+{
+    "presets": [ "@babel/preset-react",
+        [ "@babel/preset-env",
+            {
+              "targets": {
+                "browsers": [
+                  "last 1 version",
+                  "ie >= 11"
+                ]
+              },
+              "useBuiltIns": "usage",
+              "loose": true,
+              "debug": false
+            }
+        ],
+        [ "@babel/preset-stage-2", { "decoratorsLegacy": true } ]
+    ],
+    "env": {
+        "production": {
+            "plugins": [
+                ["transform-react-remove-prop-types", {
+                  "mode": "remove",
+                  "removeImport": true,
+                  "ignoreFilenames": ["node_modules"]
+                }]
+            ]
+        }
+    }
+}

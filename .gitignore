@@ -1,0 +1,9 @@
+/node_modules
+/coverage
+__snapshots__
+npm-debug.log
+yarn-error.log
+*.log
+*.lock
+*-lock.json
+/dist
