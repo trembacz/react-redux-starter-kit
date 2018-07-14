@@ -56,5 +56,5 @@ Watch files for changes and rerun tests related to changed files.
 
 Run fake REST server on port 3004
 
-````npm run jsonapi``` or ```yarn jsonapi```
+```npm run jsonapi``` or ```yarn jsonapi```
 
