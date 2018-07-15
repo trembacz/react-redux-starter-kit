@@ -1,6 +1,11 @@
 # react-redux-starter-kit
 A starter kit with react 16, redux, jest and webpack 4.
 
+[![Build Status](https://travis-ci.org/trembacz/react-redux-starter-kit.svg?branch=master)](https://travis-ci.org/trembacz/react-redux-starter-kit)
+[![Dependencies](https://david-dm.org/trembacz/react-redux-starter-kit/status.svg)](https://david-dm.org/trembacz/react-redux-starter-kit?view=list) 
+[![devDependencies](https://david-dm.org/trembacz/react-redux-starter-kit/dev-status.svg)](https://david-dm.org/trembacz/react-redux-starter-kit?type=dev&view=list)
+
+
 ## Contains:
 
 * Webpack 4 dev and production config
