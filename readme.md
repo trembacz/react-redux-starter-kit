@@ -28,7 +28,7 @@ cd react-redux-starter-kit
 
 ```npm run serve``` or ```yarn serve```
 
-Run server on port 3000 (localhost:3000/dist) with HMR enabled
+Run server on port 3000 with HMR enabled
 
 **4. Build dev files:**
 
