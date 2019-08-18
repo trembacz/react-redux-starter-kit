@@ -9,6 +9,15 @@
     "expect": true,
     "__DEV__": true
   },
+  "settings": {
+    "react": {
+	  	"version": "detect"
+		}
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended"
+  ],
   "parserOptions": {
     "ecmaFeatures": {
       "arrowFunctions": true,

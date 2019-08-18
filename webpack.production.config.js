@@ -5,43 +5,42 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 module.exports = {
-    mode: 'production',
-    entry: [
-        'core-js/modules/es6.promise',
-        path.join(__dirname, 'app/index.js')
-    ],
-    output: {
-        path: path.join(__dirname, '/dist/'),
-        filename: '[name].min.js',
-        publicPath: ''
-    },
-    resolve: {
-        modules: ['app', 'node_modules'],
-        extensions: ['.js']
-    },
-    plugins: [
-        new HtmlWebpackPlugin({
-            template: 'app/index.tpl.html',
-            inject: 'body',
-            filename: 'index.html'
-        }),
-        // new BundleAnalyzerPlugin()
-    ],
-    optimization: {
-        splitChunks: {
-            cacheGroups: {
-                commons: {
-                    test: /[\\/]node_modules[\\/]/,
-                    name: "vendor",
-                    chunks: "all",
-                }
-            }
-        }
-    },
-    performance: {
-        hints: false
-    },
-    module: {
+	mode: 'production',
+	entry: [
+		path.join(__dirname, 'app/index.js')
+	],
+	output: {
+		path: path.join(__dirname, '/dist/'),
+		filename: '[name].min.js',
+		publicPath: ''
+	},
+	resolve: {
+		modules: ['app', 'node_modules'],
+		extensions: ['.js']
+	},
+	plugins: [
+		new HtmlWebpackPlugin({
+			template: 'app/index.tpl.html',
+			inject: 'body',
+			filename: 'index.html'
+		}),
+		// new BundleAnalyzerPlugin()
+	],
+	optimization: {
+		splitChunks: {
+			cacheGroups: {
+				commons: {
+					test: /[\\/]node_modules[\\/]/,
+					name: "vendor",
+					chunks: "all",
+				}
+			}
+		}
+	},
+	performance: {
+		hints: false
+	},
+	module: {
 		rules: [
 			{
 				test: /\.(js)$/,
@@ -56,9 +55,9 @@ module.exports = {
 			},
 			{
 				test: /\.(js)$/,
-                exclude: /node_modules/,
-                use: ['babel-loader', 'webpack-conditional-loader']
-            }
+					exclude: /node_modules/,
+					use: ['babel-loader']
+			}
 		]
 	}
 };

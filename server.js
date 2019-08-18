@@ -3,7 +3,7 @@ var WebpackDevServer = require('webpack-dev-server');
 var config = require('./webpack.config');
 
 new WebpackDevServer(webpack(config), {
-    publicPath: '/',
+	publicPath: '/',
 	compress: true,
 	hot: true,
 	inline: true,
@@ -20,7 +20,7 @@ new WebpackDevServer(webpack(config), {
 		maxModules: 0,
 		timings: false,
 		version: false
-    }
+  }
 }).listen(3000, 'localhost', function (err) {
     if (err) { console.log(err); }
     console.log('Listening at localhost:3000');

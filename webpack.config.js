@@ -8,33 +8,32 @@ module.exports = {
     devtool: 'eval',
     mode: 'development',
     entry: [
-        'core-js/modules/es6.promise',
-        'webpack-dev-server/client?http://localhost:3000',
-        'webpack/hot/only-dev-server',
-        path.join(__dirname, 'app/index.js')
+			'webpack-dev-server/client?http://localhost:3000',
+			'webpack/hot/only-dev-server',
+			path.join(__dirname, 'app/index.js')
     ],
     output: {
-        path: path.join(__dirname, '/dist/'),
-        filename: 'app.js',
-        publicPath: ''
+			path: path.join(__dirname, '/dist/'),
+			filename: 'app.js',
+			publicPath: ''
     },
     resolve: {
-        modules: [ 'app', 'node_modules' ],
-        extensions: ['.js']
+			modules: [ 'app', 'node_modules' ],
+			extensions: ['.js']
     },
     plugins: [
-        new HtmlWebpackPlugin({
-          template: 'app/index.tpl.html',
-          inject: 'body',
-          filename: 'index.html'
-        }),
-        new webpack.HotModuleReplacementPlugin()
+			new HtmlWebpackPlugin({
+				template: 'app/index.tpl.html',
+				inject: 'body',
+				filename: 'index.html'
+			}),
+			new webpack.HotModuleReplacementPlugin()
     ],
     performance: {
-        hints: false
+			hints: false
     },
     module: {
-        rules: [
+			rules: [
 			{
 				test: /\.(js)$/,
 				enforce: "pre",
@@ -50,7 +49,7 @@ module.exports = {
 				test: /\.(js)$/,
 				exclude: /node_modules/,
 				loader: 'babel-loader'
-            }
+			}
 		]
-    }
+	}
 };

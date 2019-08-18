@@ -6,7 +6,7 @@ const Footer = (props) => {
 		<footer>
 			<div>
 				<p>
-					<a target="_blank" href={props.href}>{props.title}</a>
+					<a target="_blank" rel="noopener noreferrer" href={props.href}>{props.title}</a>
 				</p>
 			</div>
 		</footer>

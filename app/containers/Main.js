@@ -5,13 +5,13 @@ import Footer from 'components/Footer';
 
 class Main extends Component {
 	render() {
-	    return (
-	        <div id="main-container">
-	            <Header title="React Starter Kit" />
-	            <Counter />
-	            <Footer title="Github" href="https://github.com/trembacz/react-redux-starter-kit#react-redux-starter-kit" />
-	        </div>
-	    );
+		return (
+			<div id="main-container">
+				<Header title="React Starter Kit" />
+				<Counter />
+				<Footer title="Github" href="https://github.com/trembacz/react-redux-starter-kit#react-redux-starter-kit" />
+			</div>
+		);
 	}
 }
 
