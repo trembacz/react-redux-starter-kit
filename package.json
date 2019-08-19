@@ -44,8 +44,7 @@
       "!app/actions/*",
       "!app/store/*",
       "!app/reducers/*",
-      "!dist/*",
-      "!app/__test__/animationFrame.js"
+      "!dist/*"
     ],
     "roots": [
       "<rootDir>/app/"
