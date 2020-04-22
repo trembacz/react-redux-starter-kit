@@ -1,8 +1,10 @@
-import * as types from './types';
+import { COUNTER_UP } from './types';
 
-export function count(counter) {
-	return {
-		type: types.COUNTER_UP,
-		counter
-	};
-}
+export const count = counter => ({
+    type: COUNTER_UP,
+    counter,
+});
+
+export default {
+    count,
+};
